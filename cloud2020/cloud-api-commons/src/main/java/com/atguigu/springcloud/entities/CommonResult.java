@@ -1,15 +1,14 @@
-package com.atguigu.springcloud;
-
+package com.atguigu.springcloud.entities;
+/**
+* @program: cloud2020
+* @description: Json封装实体类
+* @author: jzm
+* @create: 2020-10-29 20:47
+**/
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @program: cloud2020
- * @description: Json封装实体类
- * @author: jzm
- * @create: 2020-10-26 22:26
- **/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +17,7 @@ public class CommonResult<T> {
     private String message;
     private T data;
 
-    public CommonResult(Integer code,String message){
+    public CommonResult(Integer code, String message){
         this(code,message,null);
     }
 }

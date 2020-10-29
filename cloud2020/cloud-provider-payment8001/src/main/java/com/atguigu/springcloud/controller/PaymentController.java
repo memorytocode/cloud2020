@@ -1,5 +1,6 @@
 package com.atguigu.springcloud.controller;
 
+
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
 import com.atguigu.springcloud.service.PaymentService;
@@ -22,7 +23,7 @@ public class PaymentController {
     PaymentService paymentService;
 
     @PostMapping(value = "/payment/create")
-    public CommonResult create( @RequestBody  Payment payment) {
+    public CommonResult create(@RequestBody Payment payment) {
         int i = paymentService.create(payment);
         if (i > 0) {
             return new CommonResult(200, "数据插入成功", i);
